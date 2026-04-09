@@ -47,12 +47,16 @@ def plot_clusters(df):
         palette='viridis'
     )
     plt.title("Worker Segmentation using K-Means")
-    plt.show()
 
+    # Save image
+    plt.savefig("cluster_plot.png")
+
+    # Show graph
+    plt.show()
 
 # MAIN BLOCK
 if __name__ == "__main__":
-
+    
     # Load dataset
     df = pd.read_csv("data/raw/gig_dirty_data.csv")
 
