@@ -71,7 +71,7 @@ def plot_cluster_distribution(df):
 
     df['cluster'].value_counts().sort_index().plot(kind='bar')
 
-    plt.title("Cluster Distribution")
+    plt.title("Cluster Distribution Grpah: ")
     plt.xlabel("Cluster")
     plt.ylabel("Number of Workers")
 
