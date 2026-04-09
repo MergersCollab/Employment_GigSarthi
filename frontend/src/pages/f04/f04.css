@@ -1,0 +1,34 @@
+.f04-container {
+  padding: 30px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 12px;
+}
+
+.f04-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.f04-table th,
+.f04-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.f04-table th {
+  background-color: #2563eb;
+  color: white;
+}
+
+.f04-list {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.f04-text {
+  margin: 5px 0;
+  color: #e2e8f0;
+}

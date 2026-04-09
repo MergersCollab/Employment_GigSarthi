@@ -1,0 +1,54 @@
+.f08-container {
+  padding: 30px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #020617, #1e293b);
+  border-radius: 12px;
+}
+
+.f08-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.f08-table th,
+.f08-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.f08-table th {
+  background-color: #9333ea;
+  color: white;
+}
+
+.f08-list {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.graph {
+  width: 500px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 2px solid #444;
+}
+
+.formula {
+  background-color: #111827;
+  padding: 10px;
+  border-radius: 6px;
+  color: #38bdf8;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #22c55e;
+}
+
+.insight {
+  margin-top: 10px;
+  font-style: italic;
+  color: #facc15;
+}

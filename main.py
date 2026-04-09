@@ -5,6 +5,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
+# =========================
+# WORKER INTELLIGENCE
+# =========================
 def worker_intelligence(df):
     features = [
         'earnings_per_day',
@@ -38,7 +41,12 @@ def worker_intelligence(df):
     return df
 
 
+# =========================
+# SCATTER PLOT (Segmentation)
+# =========================
 def plot_clusters(df):
+    plt.figure()
+
     sns.scatterplot(
         data=df,
         x='earnings_per_day',
@@ -46,25 +54,50 @@ def plot_clusters(df):
         hue='cluster',
         palette='viridis'
     )
+
     plt.title("Worker Segmentation using K-Means")
 
     # Save image
     plt.savefig("cluster_plot.png")
 
-    # Show graph
     plt.show()
 
-# MAIN BLOCK
+
+# =========================
+# DISTRIBUTION PLOT (NEW)
+# =========================
+def plot_cluster_distribution(df):
+    plt.figure()
+
+    df['cluster'].value_counts().sort_index().plot(kind='bar')
+
+    plt.title("Cluster Distribution")
+    plt.xlabel("Cluster")
+    plt.ylabel("Number of Workers")
+
+    # Save image
+    plt.savefig("cluster_distribution.png")
+
+    plt.show()
+
+
+# =========================
+# MAIN
+# =========================
 if __name__ == "__main__":
-    
+
     # Load dataset
     df = pd.read_csv("data/raw/gig_dirty_data.csv")
 
-    # Apply clustering
+    # Apply cleaning + clustering
     df = worker_intelligence(df)
 
-    # Print output
+    # Save cleaned + clustered data
+    df.to_csv("cleaned_clustered_data.csv", index=False)
+
+    # Show sample output
     print(df.head())
 
-    # Plot clusters
+    # Generate graphs
     plot_clusters(df)
+    plot_cluster_distribution(df)
