@@ -82,7 +82,7 @@ def plot_cluster_distribution(df):
 
 
 # =========================
-# MAIN
+# MAIN to add the clean csv also 
 # =========================
 if __name__ == "__main__":
 
